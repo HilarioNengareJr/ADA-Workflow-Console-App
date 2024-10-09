@@ -1,7 +1,7 @@
 <h1>Workflow Automation Console App</h1>
 
 <h2>Overview</h2>
-<p>This project is a simple, console-based workflow automation system that mimics a document approval process. It involves creating a basic workflow engine, defining user roles (such as submitter and approver), and automating the approval or rejection of documents.</p>
+<p>This is a simple, console-based workflow automation system that mimics a document approval process. It involves creating a basic workflow engine, defining user roles (such as submitter and approver), and automating the approval or rejection of documents.</p>
 
 <h2>Features</h2>
 <ul>
