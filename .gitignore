@@ -1,3 +1,4 @@
-.aider*
+
 # Ignore Aider-related files and directories
 .aider*
+.aider.tags.cache.v3
