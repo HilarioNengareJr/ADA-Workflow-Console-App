@@ -11,7 +11,7 @@ using System.Collections.Generic;
 
 public class WorkFlowAutomation{
 
-    public static void main(str[] args){
+    public static void main(string[] args){
 
         console.WriteLine("Hello World");
     }
