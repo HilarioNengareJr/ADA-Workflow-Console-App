@@ -1,1 +1,3 @@
 .aider*
+# Ignore Aider-related files and directories
+.aider*
