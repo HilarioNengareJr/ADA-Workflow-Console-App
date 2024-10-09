@@ -8,3 +8,5 @@ bin/
 obj/
 *.csproj
 *.sln
+ADA-Workflow-Console-App.csproj
+
