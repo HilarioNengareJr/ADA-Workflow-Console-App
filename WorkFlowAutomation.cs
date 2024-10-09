@@ -9,17 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
-
 namespace WorkflowAutomation
 {
-    
-class WorkFlowAutomation{
-
-    static void Main(string[] args){
-
-        Console.WriteLine("Hello World");
-
+    class WorkFlowAutomation
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World");
+        }
     }
-}
-
 }
