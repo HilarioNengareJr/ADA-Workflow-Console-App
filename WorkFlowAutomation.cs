@@ -27,7 +27,7 @@ namespace WorkflowAutomation
             Document doc = new Document(docName, "mydoc.txt", description, "Hilario Nengare");
 
             // Simulate approval process
-            WorkFlowEngine.ProcessDocument(doc);
+            WorkFlowEngine.processDocument(doc);
             Console.ReadKey();
         }
     }
