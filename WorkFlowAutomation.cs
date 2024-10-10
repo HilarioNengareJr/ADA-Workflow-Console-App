@@ -16,8 +16,18 @@ namespace WorkflowAutomation
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Application started.");
-            Console.WriteLine("Hello World");
+            Console.WriteLine("Submit your document for approval:");
+            
+            Console.Write("Enter document name: ");
+            string docName = Console.ReadLine();
+
+            Console.Write("Enter description: ");
+            string description = Console.ReadLine();
+
+            Document doc = new Document(docName, "mydoc.txt", description, "Hilario Nengare");
+
+            // Simulate approval process
+            WorkFlowEngine.ProcessDocument(doc);
             Console.ReadKey();
         }
     }
@@ -38,7 +48,7 @@ namespace WorkflowAutomation
             Submitter = submitter;
             DocumentStatus = Status.Submitted;
         }
-    }
+    }   
 
     enum Status {
         Submitted,
@@ -46,8 +56,8 @@ namespace WorkflowAutomation
         Rejected
     }
 
-    class WriteFileEngine{
-        public static void processDocument(Document doc){
+    class WorkFlowEngine{
+        public static void ProcessDocument(Document doc){
             Console.WriteLine($"Processing document: {doc.Name}");
             string content =  File.ReadAllText(doc.Path);
 
@@ -60,6 +70,11 @@ namespace WorkflowAutomation
                 Console.WriteLine($"Document {doc.Name} has been rejected.");
             }
             Console.WriteLine($"Finished processing document: {doc.Name}");
+        }
+
+        private static void NotifySubmitter(Document doc)
+        {
+            Console.WriteLine($"Notification: {doc.Submitter}, your document '{doc.Name}' is {doc.DocumentStatus}.");
         }
     }
 }
