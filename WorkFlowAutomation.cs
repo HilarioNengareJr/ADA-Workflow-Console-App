@@ -19,10 +19,10 @@ namespace WorkflowAutomation
             Console.WriteLine("Submit your document for approval:");
             
             Console.Write("Enter document name: ");
-            string docName = Console.ReadLine();
+            string docName = Console.ReadLine() ?? "DefaultDocName";
 
             Console.Write("Enter description: ");
-            string description = Console.ReadLine();
+            string description = Console.ReadLine() ?? "DefaultDescription";
 
             Document doc = new Document(docName, "mydoc.txt", description, "Hilario Nengare");
 
