@@ -16,6 +16,7 @@ namespace WorkflowAutomation
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Application started.");
             Console.WriteLine("Hello World");
             Console.ReadKey();
         }
@@ -30,6 +31,7 @@ namespace WorkflowAutomation
         public Status DocumentStatus {get; set;}
         
         public Document(string name, string path, string description, string submitter){
+            Console.WriteLine($"Creating new document: {name}");
             Name = name;
             Path = path;
             Description = description;
@@ -46,16 +48,18 @@ namespace WorkflowAutomation
 
     class WriteFileEngine{
         public static void processDocument(Document doc){
+            Console.WriteLine($"Processing document: {doc.Name}");
             string content =  File.ReadAllText(doc.Path);
 
             if(String.IsNullOrEmpty(content)){
                 doc.DocumentStatus = Status.Rejected;
-                Console.WriteLine($"The above file has been accepted.");
+                Console.WriteLine($"Document {doc.Name} has been accepted.");
             }
             else{
                 doc.DocumentStatus = Status.Submitted;
-                Console.WriteLine("The above file has been rejected.");
+                Console.WriteLine($"Document {doc.Name} has been rejected.");
             }
+            Console.WriteLine($"Finished processing document: {doc.Name}");
         }
     }
 }
