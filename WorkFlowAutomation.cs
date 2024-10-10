@@ -57,7 +57,7 @@ namespace WorkflowAutomation
     }
 
     class WorkFlowEngine{
-        public static void ProcessDocument(Document doc){
+        public static void processDocument(Document doc){
             Console.WriteLine($"Processing document: {doc.Name}");
             string content =  File.ReadAllText(doc.Path);
 
